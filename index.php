@@ -17,13 +17,13 @@
     <?php
         include('dbconnection.php');
 
-        $log = $db->real_escape_string('SELECT * FROM UPLOAD');
+        $log = $db->real_escape_string('SELECT * FROM upload');
         $query = $db->query($log);
-        while($hasil =$query->fetch_assoc());
+        while($hasil =$query->fetch_assoc()):
     ?>
     <tr>
-        <td><?= $hasil['username'] ?></td>
-        <td><?= $hasil['timestamp'] ?></td>
+        <td><?= $hasil['USERNAME'] ?></td>
+        <td><?= $hasil['WAKTU'] ?></td>
     </tr>
     <?php
         endwhile;

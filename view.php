@@ -6,6 +6,8 @@
 <?php
     require './backend/dbconnection.php';
     $all_user = getAllUser("SELECT * FROM guest");
+
+    $all_log = getAllLog("SELECT * FROM uploadtime");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -204,10 +206,6 @@
                     <div class="form-group">
                         <label class="form-label" for="nama">Nama</label>
                         <input class="form-input" type="text" id="nama" name="nama" placeholder="Nama Guest" required>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label" for="ktp">No KTP</label>
-                        <input class="form-input" type="text" id="ktp" name="ktp" placeholder="Nomor KTP" required>
                     </div>
                     <div class="form-group">
                         <label class="form-label" for="telp">Nomor Telepon</label>

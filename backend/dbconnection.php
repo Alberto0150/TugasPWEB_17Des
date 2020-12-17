@@ -13,6 +13,13 @@
         return $all_result;
     }
 
+    function getAllLog($query_sintax){
+        global $db
+        $all_log = mysqli_query($db, $query_sintax);
+
+        dbclose();
+        return $all_log;
+    }
     function addGuest($request) {
         global $db;
 
